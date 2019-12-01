@@ -1,0 +1,26 @@
+@import 'fonts.css';
+
+ul, li{
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-bar{
+	padding: 20px 0;
+	color: #212121;
+}
+
+.menu__item{
+	margin-left: 37px;
+}
+
+.menu__item a{
+	font-family: 'Open Sense Semibold';
+	font-style: 20px;
+	color: #212121;
+}
+
+.menu__item a:hover{
+	color: #212121;
+}
