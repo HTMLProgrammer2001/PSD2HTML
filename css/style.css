@@ -6,6 +6,11 @@ ul, li{
 	padding: 0;
 }
 
+body{
+	font-family: 'Open Sense Semibold';
+	background: grey;
+}
+
 .menu-bar{
 	padding: 20px 0;
 	color: #212121;
@@ -20,7 +25,74 @@ ul, li{
 	font-style: 20px;
 	color: #212121;
 }
-
 .menu__item a:hover{
 	color: #212121;
+}
+
+/*Шапка*/
+
+.header{
+	padding: 180px 0;
+	text-align: center;
+	color: white;
+	background-image: url('../img/header.png');
+	background-size: hover;
+	background-position: 0 100%;
+}
+
+.header__title{
+	font-style: 55px;
+}
+.header__desc{
+	font-size: 20px;
+	margin-bottom: 100px;
+}
+
+.button{
+	padding: 10px 25px;
+	margin: 0 10px;
+	color: white;
+	transition: 0.3s;
+}
+.button_empty{
+	background: transparent;
+	border: 2px solid white;
+}
+.button_full{
+	background: #00897b;
+	border: 2px solid #00897b;
+}
+
+.button:hover{
+	border: 2px dotted white;
+	background: #04574e;
+}
+
+/*About*/
+
+.about{
+	text-align: center;
+	color: #000;
+}
+
+.about__header{
+	margin: 80px 0;
+}
+
+.about__title{
+	font-size: 30px;
+	font-weight: bold;
+}
+.about__text{
+	font-size: 15px;
+}
+
+.about__item__header{
+	margin: 20px 0;
+
+	font-family: 'Open Sense Semibold';
+	font-size: 20px;
+}
+.about__item__text{
+	font-size: 15px;
 }
