@@ -70,13 +70,14 @@ body{
 
 /*About*/
 
-.about{
+.about, .services{
 	text-align: center;
 	color: #000;
+	padding: 120px 0;
 }
 
 .about__header{
-	margin: 80px 0;
+	margin-bottom: 80px;
 }
 
 .about__title{
@@ -85,6 +86,7 @@ body{
 }
 .about__text{
 	font-size: 15px;
+	word-wrap: break-word;
 }
 
 .about__item__header{
@@ -95,4 +97,99 @@ body{
 }
 .about__item__text{
 	font-size: 15px;
+}
+
+/*Services*/
+.services{
+	background: #e4fdf9;
+}
+
+
+.services__card{
+	transition: 0.3s;
+}
+.services__card:hover{
+	box-shadow: 0 10px 12px -3px rgba(0, 0, 0, 0.26);
+}
+
+/*Portfolio*/
+.portfolio{
+	margin: 120px 0 135px 0;
+}
+
+.but{
+	cursor: pointer;
+	padding: 10px 30px;
+	background: #00897b;
+	border: 2px solid #00897b;
+	text-align: center;
+	transition: 0.3s;
+	color: white;
+	height: 50px;
+	text-transform: uppercase;
+}
+.but:hover{
+	color: black;
+	background: transparent;
+	border: 2px solid #00897b;
+}
+.but:focus{
+	outline: none;
+}
+.but_active{
+	color: black;
+	background: transparent;
+}
+
+.portfolio__works{
+	padding: 120px 0;
+}
+
+.portfolio__works img{
+	margin-bottom: 30px;
+}
+
+/*Our prices*/
+.price__card__header{
+	background-color: #fff !important;
+	background-image: url('../img/pricing_bg.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border: 0 !important;
+}
+
+.price{
+	background: #f0f1f1;
+}
+
+.price__val{
+	font-size: 25px;
+}
+
+.price__features{
+	list-style: none;
+}
+
+.price__features>li{
+	margin: 10px;
+	border-bottom: 1px solid silver;
+	color: grey;
+	padding: 3px;
+}
+
+.but-dark{
+	border: 2px solid black;
+	background: transparent;
+	color: black;
+}
+.but-dark:hover{
+	background: #00897b;
+	color: white;
+}
+
+.price__card{
+	cursor: pointer;
+}
+.price__card:hover{
+	box-shadow: 0 0px 11px 3px rgba(0, 0, 0, 0.39);
 }
