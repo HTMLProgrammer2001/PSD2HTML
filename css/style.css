@@ -9,6 +9,10 @@ ul, li{
 body{
 	font-family: 'Open Sense Semibold';
 	background: grey;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+	width: 100vw !important;
 }
 
 .menu-bar{
@@ -160,6 +164,7 @@ body{
 
 .price{
 	background: #f0f1f1;
+	padding: 120px;
 }
 
 .price__val{
@@ -192,4 +197,237 @@ body{
 }
 .price__card:hover{
 	box-shadow: 0 0px 11px 3px rgba(0, 0, 0, 0.39);
+}
+
+/*Team*/
+.team{
+	padding: 125px 0;
+}
+.soc{
+	display: flex;
+	justify-content: center;
+}
+.soc>li{
+	margin: 0 10px;
+}
+
+.team__header{
+	padding-bottom: 75px;
+}
+
+.dots-style{
+	display: flex;
+	justify-content: center;
+	margin: 70px 0;
+}
+.dots-style button{
+	margin: 0 5px;
+	border-radius: 50%;
+	border: none;
+	font-size: 0;
+	padding: 0;
+	background: grey;
+	width: 10px;
+	height: 10px;
+	cursor: pointer;
+}
+.dots-style .slick-active button{
+	background: #00897b;
+}
+
+/*Blog*/
+.left>div:first-child{
+	order: 1;
+}
+.left>div:last-child{
+	order: 2;
+}
+
+.right>div:first-child{
+	order: 2;
+}
+.right>div:last-child{
+	order: 1;
+}
+
+.blog .content .row a:first-child{
+	font-size: 25px;
+	color: #00897b;
+	font-family: 'Open Sense Semibold';
+}
+
+.blog .content .row .col-xl-6:last-child{
+	padding: 40px;
+	text-align: left;
+}
+
+.blog .content .row .date{
+	margin: 20px 0;
+	font-size: 17px;
+	font-family: 'Open Sense Semibold';	
+}
+
+.blog .content .row .date i{
+	margin-right: 10px;
+}
+
+.blog .content .row .date span{
+	margin-right: 35px;
+}
+
+/*Footer*/
+.footer{
+	color: white;
+	background: url('../img/footer.png');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 120px;
+	text-align: center;
+}
+
+.footer__icons{
+	padding: 80px 0;
+}
+
+.footer__icons i{
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	background: #00f;
+	text-align: center;
+	line-height: 65px;
+	font-size: 30px;
+}
+
+.footer__icons p{
+	margin-top: 30px;
+	font-size: 18px;
+}
+
+.footer__form input, .footer__form textarea{
+	outline: none;
+}
+
+/*Adaptivity*/
+
+.burger{
+	width: 50px;
+	height: 50px;
+	background: rgba(0, 0, 0, .8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	display: none;
+	cursor: pointer;
+	z-index: 9999 !important;
+}
+.burger span{
+	width: 75%;
+	height: 2px;
+	border: 1px solid white;
+	display: block;
+	position: absolute;
+	transition: .3s;
+}
+
+.burger span::before{
+	padding: 0;
+	margin: 0;
+	content: '';
+	position: absolute;
+	top: -8px;
+	left: 0;
+	height: 2px;
+	display: block;
+	width: 100%;
+	border: 1px solid white;
+	transition: .3s;
+}
+
+.burger span::after{
+	padding: 0;
+	margin: 0;
+	content: '';
+	height: 2px;
+	position: absolute;
+	top: 8px;
+	left: 0;
+	display: block;
+	width: 100%;
+	border: 1px solid white;
+	transition: .3s;
+}
+
+.burger-active span::before{
+	opacity: 0;
+}
+.burger-active span{
+	transform: rotate(45deg);
+}
+.burger-active span::after{
+	transform: rotate(-90deg);
+	top: 0;
+}
+.burger-active+nav{
+	width: auto;
+}
+
+@media all and (max-width: 1000px){
+	.burger{
+		display: flex;
+	}
+	.menu_nav{
+		width: 0;
+		position: fixed;
+		right: 0;
+		top: 60px;
+		background: rgba(0, 0, 0, .7);
+		z-index: 9999;
+	}
+	.menu{
+		font-size: 18px;
+		flex-direction: column;
+		text-align: center;
+		margin: 0;
+	}
+	.menu li{
+		cursor: pointer;
+		text-align: center;
+		padding: 5px 50px;
+		margin: 0;
+		display: block;
+	}
+	.menu li a{
+		color: white;
+	}
+	.menu li:hover{
+		background: rgba(255, 255, 255, .9);
+	}
+	.menu li:hover a{
+		color: black;
+	}
+}
+
+#top{
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 55px;
+	background: rgba(0, 0, 0, .7);
+	color: white;
+	font-family: 'Open Sense Semibold';
+	font-size: 30px;
+	cursor: pointer;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	transition: .3s;
+}
+
+.hide{
+	opacity: 0;
 }

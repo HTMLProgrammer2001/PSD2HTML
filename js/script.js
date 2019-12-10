@@ -19,4 +19,42 @@ $(document).ready(function(){
 					}
 				});
 	});
+
+
+	$('.team__slider').slick({
+		dots: true,
+		arrows: false,
+  		infinite: true,
+  		slidesToShow: 3,
+  		slidesToScroll: 3,
+  		dotsClass: 'dots-style'
+	});
+
+	$('.burger').on('click', function(){
+		$(this).toggleClass('burger-active');
+	});
+
+	$(document).on('scroll', function(e){
+		if(pageYOffset < 1500)
+			$('#top').addClass('hide');
+		else
+			$('#top').removeClass('hide');
+	});
+
+	$('#top').on('click', function(){
+		$('html, body').animate({
+			scrollTop: 0
+		}, 300);
+	});
+
+	$('.menu a').on('click', function(){
+		$('html, body').animate({
+			scrollTop: $(this.getAttribute('href')).offset().top
+		}, +$(this).attr('data-delay'));
+
+		return false;
+	});
+
+	AOS.init();
+
 });
