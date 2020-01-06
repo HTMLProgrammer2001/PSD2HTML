@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	$('.filter_buts>.but').on('click', function(e){
+	    AOS.init();
+	    
 		//change active button
 		$(this).parent().find('.but_active').removeClass('but_active');
 		$(this).addClass('but_active');
@@ -25,13 +27,15 @@ $(document).ready(function(){
 		dots: true,
 		arrows: false,
   		infinite: true,
-  		slidesToShow: 3,
-  		slidesToScroll: 3,
+  		slidesToShow: 1,
+  		slidesToScroll: 1,
   		dotsClass: 'dots-style'
 	});
 
 	$('.burger').on('click', function(){
 		$(this).toggleClass('burger-active');
+		
+		AOS.init();
 	});
 
 	$(document).on('scroll', function(e){
