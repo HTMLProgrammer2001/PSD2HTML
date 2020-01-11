@@ -1,0 +1,171 @@
+$font: 'Open Sense';
+
+$imgDir: '../img/';
+
+//colors
+$dark: #212121;
+$grBlue: #00897b;
+$darkGrBlue: #04574e;
+$lightGr: #e4fdf9;
+
+$bordW: 2px;
+$bord: $bordW solid;
+$bordDot: $bordW dotted;
+
+
+%line{
+	padding: 0;
+	margin: 0;
+	height: 3px;
+	width: 100%;
+
+	content: '';
+
+	position: absolute;
+	left: 0;
+
+	display: block;
+
+	background: #000;
+
+	transition: .3s;
+}
+
+//General styles
+
+ul, li{
+	display: block;
+
+	margin: 0;
+	padding: 0;
+}
+
+//Button header
+
+.button{
+	padding: .5em 1.25em;
+	margin: 0 .5em;
+
+	color: #fff;
+
+	transition: .3s;
+
+	&_empty{
+		background: transparent;
+
+		border: $bord #fff;
+	}
+
+	&_full{
+		background: $grBlue;
+
+		border: $bord $grBlue;
+	}
+
+	&:hover{
+		border: $bordDot #fff;
+
+		background: $darkGrBlue;
+	}
+}
+
+.sect-pad{
+	text-align: center;
+	color: #000;
+	padding: 6rem 0;	
+}
+
+//Button prices
+
+.but{
+	cursor: pointer;
+
+	padding: .5em 1.5em;
+
+	background: $grBlue;
+
+	border: $bord $grBlue;
+
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+
+	transition: .3s;
+
+	&:hover{
+		color: #000;
+
+		background: transparent;
+
+		border: $bord $grBlue;
+	}
+
+	&:focus{
+		outline: none;
+	}
+
+	&_active{
+		color: #000;
+
+		background: transparent;
+	}
+
+	&-dark{
+		border: $bord #000;
+
+		background: transparent;
+
+		color: #000;
+
+		&:hover{
+			background: $grBlue;
+
+			color: #fff;
+		}
+	}
+}
+
+//Dots in slider
+.dots-style{
+	display: flex;
+	justify-content: center;
+
+	margin: 3.5rem 0;
+
+	& button{
+		margin: 0 5px;
+		padding: 0;
+		width: 10px;
+		height: 10px;
+
+		border-radius: 50%;
+		border: none;
+
+		font-size: 0;
+		
+		background: grey;
+
+		cursor: pointer;
+	}
+
+	& .slick-active button{
+		background: $grBlue;
+	}
+}
+
+//Direction in blog
+.left>div:first-child, .right>div:last-child{
+	order: 1;
+}
+
+.left>div:last-child, .right>div:first-child{
+	order: 2;
+}
+
+.max-img{
+	max-width: 100%;
+}
+
+.hide{
+	opacity: 0;
+}

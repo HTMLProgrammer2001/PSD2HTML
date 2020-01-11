@@ -1,7 +1,5 @@
 $(document).ready(function(){
 	$('.filter_buts>.but').on('click', function(e){
-	    AOS.init();
-	    
 		//change active button
 		$(this).parent().find('.but_active').removeClass('but_active');
 		$(this).addClass('but_active');
@@ -16,9 +14,10 @@ $(document).ready(function(){
 		}).delay(300).each(
 				function(){
 					if((b_id == 0 || b_id == $(this).attr('data-type')) && ($(this).hasClass('filter_hide'))){
-						$(this).fadeIn(300);
+						$(this).fadeIn(300, AOS.init.bind(AOS));
 						$(this).removeClass('filter_hide');
 					}
+
 				});
 	});
 
